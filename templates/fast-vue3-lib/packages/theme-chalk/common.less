@@ -1,0 +1,65 @@
+@import 'color';
+
+// 自定义滚动条样式
+.ksg-common__scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgb(0 21 41 / 5%);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgb(0 21 41 / 5%);
+  }
+}
+
+// 超出省略
+.ksg-common__ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ksg-common__link {
+  color: @primary-color;
+  cursor: pointer;
+
+  &:hover {
+    color: @primary-color;
+  }
+}
+
+.ksg-common__btn {
+  cursor: pointer;
+
+  &:hover {
+    color: @primary-color;
+  }
+}
+
+.ksg-common__table-drag {
+  .ant-table-tbody > tr.ksg-common__table-drag-target > td {
+    border-top: 2px @primary-color solid;
+  }
+}
+
+.ksg-common__drag {
+  cursor: grab; /* 设置光标为抓取手形 */
+  padding: 4px;
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(24, 144, 255, 0.5);
+    color: rgba(42, 46, 54, 0.88);
+  }
+  &:active {
+    cursor: grabbing; /* 拖拽时设置光标为抓取中手形 */
+  }
+}

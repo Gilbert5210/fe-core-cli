@@ -1,0 +1,8 @@
+packages:
+  - packages/*
+  - cli
+  - docs
+  - example
+  - build
+  # exclude packages that are inside test directories
+  - '!**/test/**'

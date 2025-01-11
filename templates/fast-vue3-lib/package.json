@@ -1,0 +1,106 @@
+{
+  "name": "{{libraryName}}",
+  "version": "1.0.0",
+  "private": true,
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "scripts": {
+    "preInstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "dev:dev": "pnpm run -C example dev:dev",
+    "dev:uat": "pnpm run -C example dev:uat",
+    "dev:prod": "pnpm run -C example dev:prod",
+    "build:dev": "pnpm run -C example build:dev",
+    "build:uat": "pnpm run -C example build:uat",
+    "build:prod": "pnpm run -C example build:prod",
+    "preview:example": "pnpm run -C example preview",
+    "build": "pnpm run -C build build",
+    "clear": "pnpm run -C build clear",
+    "build:lib": "pnpm run -C build build:component",
+    "build:utils": "pnpm run -C build build:utils",
+    "build:theme": "pnpm run -C build build:theme",
+    "docs:dev": "pnpm run build:utils && pnpm run -C docs dev --host",
+    "docs:build": "pnpm run build:utils && pnpm run -C docs build",
+    "docs:preview": "pnpm run build:utils && pnpm run -C docs serve",
+    "gen:component": "pnpm run -C cli gen",
+    "remove:component": "pnpm run -C cli remove",
+    "updatePackageName": "pnpm run -C cli updatePackageName",
+    "start:verdaccio": "pnpm verdaccio",
+    "pub:local": "pnpm publish --registry http://localhost:4873/",
+    "lint": "eslint \"{cli,packages,docs,example,build}/**/*.{js,ts,vue,jsx,tsx}\" --fix",
+    "prettier": "prettier --write \"{cli,packages,example,build}/**/*.{js,ts,jsx,tsx,vue,less}\"",
+    "changeset": "changeset",
+    "version-pak": "changeset version",
+    "publish:only": "changeset publish",
+    "exit:beta": "pnpm run changeset pre exit",
+    "release:beta": "sh release.sh beta",
+    "release:comp:beta": "sh release.sh beta comp",
+    "release:utils:beta": "sh release.sh beta utils",
+    "release": "sh release.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.xxx.com/ksg-frontend/ksg-ui"
+  },
+  "keywords": [
+    "vue3组件库",
+    "vue3",
+    "antd-vue"
+  ],
+  "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "cli/*",
+    "docs/*",
+    "example/*",
+    "build/*"
+  ],
+  "dependencies": {
+    "axios": "^1.4.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@changesets/changelog-git": "^0.1.14",
+    "@changesets/cli": "^2.27.9",
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "@types/lodash-es": "^4.17.7",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "8.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "less": "^4.1.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.8",
+    "prettier-eslint": "^15.0.1",
+    "release-it": "^15.8.0",
+    "typescript": "^5.4.4",
+    "verdaccio": "^5.20.1",
+    "vite": "^4.5.0",
+    "vite-plugin-dts": "^2.1.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^2.0.7",
+    "vue-types": "^5.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue}": [
+      "pnpm run prettier",
+      "pnpm run lint"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@{{npmScope}}/docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fast-glob": "^3.2.12",
+    "vite-plugin-windicss": "^1.9.1",
+    "vitepress": "1.2.3",
+    "windicss": "^3.5.6"
+  },
+  "dependencies": {
+    "@vitepress-demo-preview/component": "^2.0.2",
+    "@vitepress-demo-preview/plugin": "^1.1.5"
+  }
+}

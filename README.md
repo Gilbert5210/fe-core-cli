@@ -1,8 +1,8 @@
-![web-core-cli](./logo.png)
+![fe-core-cli](./logo.png)
 
 - 建议先看看掘金文章
 
-[10 分钟快速搭个多合一脚手架 web-core-cli，支持 Vue3、H5、node 模板](https://juejin.cn/post/7121268498956812324)
+[10 分钟快速搭个多合一脚手架 fe-core-cli，支持 Vue3、H5、node 模板](https://juejin.cn/post/7121268498956812324)
 
 ## 😏**快速使用**
 
@@ -10,9 +10,9 @@
 
 npm i pnpm -g   //默认需要安装pnpm
 
-npm i web-core-cli -g
+npm i fe-core-cli -g
 
-web-core-cli create <projectname> //输入你的项目名
+fe-core-cli create <projectname> //输入你的项目名
 
 ```
 

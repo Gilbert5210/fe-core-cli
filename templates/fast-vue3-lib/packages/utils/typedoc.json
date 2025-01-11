@@ -1,0 +1,21 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./src/common.ts",
+    "./src/string.ts",
+    "./src/array.ts",
+    "./src/request.ts",
+    "./src/regex.ts",
+    "./src/EnumExtend.ts",
+    "./src/resolver.ts",
+    "./src/directives/directives.ts",
+    "./src/hooks/hooks.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "test/**/*.ts"
+  ],
+  "out": "../../docs/utilModules",
+  "includeVersion": true,
+  "plugin": ["typedoc-plugin-markdown"]
+}

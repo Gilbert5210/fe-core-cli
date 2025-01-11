@@ -1,0 +1,55 @@
+{
+  "name": "@{{npmScope}}/utils",
+  "version": "1.0.0",
+  "description": "通用工具函数",
+  "files": [
+    "esm",
+    "lib",
+    "package.json",
+    "README.md",
+    "types"
+  ],
+  "main": "lib/index.js",
+  "module": "esm/index.mjs",
+  "typings": "esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./esm/index.mjs",
+      "require": "./lib/index.js"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "prebuild": "npm run test",
+    "doc": "typedoc --options typedoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.xxx.com/ksg-frontend/ksg-ui"
+  },
+  "keywords": [
+    "util",
+    "工具库"
+  ],
+  "author": "{{author}}",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.corp.xxx.com/"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/jest": "^29.4.0",
+    "@types/qs": "^6.9.11",
+    "jest": "^29.5.0",
+    "typedoc": "^0.24.6",
+    "typedoc-plugin-markdown": "^3.15.2",
+    "unplugin-vue-components": "^0.24.1",
+    "vite-plugin-mkcert": "^1.17.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.6"
+  }
+}

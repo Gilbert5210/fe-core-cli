@@ -1,10 +1,10 @@
 {
-  "name": "web-core-cli",
+  "name": "fe-core-cli",
   "version": "1.0.3",
   "description": "All-in-one scaffolding, cli integrated with Vue3 ecological chain, cli of H5 page, mock template cli of Node",
   "main": "./bin/cli.js",
   "bin": {
-    "web-core-cli": "bin/cli.js"
+    "fe-core-cli": "bin/cli.js"
   },
   "keywords": [
     "cli",
@@ -15,7 +15,7 @@
     "node"
   ],
   "scripts": {
-    "cli": "node ./bin/cli.js"
+    "cli": "node ./bin/cli.js create demo-ui"
   },
   "author": "chen",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "ejs": "^3.1.8",
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
+    "handlebars": "^4.7.8",
     "inquirer": "^7.3.3",
     "ora": "^5.4.1",
     "shelljs": "^0.8.5"

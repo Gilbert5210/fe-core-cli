@@ -1,0 +1,54 @@
+{
+  "name": "@{{npmScope}}/components",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "main": "lib/index.js",
+  "module": "esm/index.mjs",
+  "types": "esm/index.d.ts",
+  "type": "module",
+  "files": [
+    "esm",
+    "lib",
+    "theme-chalk",
+    "package.json",
+    "typings",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "require": "./lib.index.js",
+      "import": "./esm/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.xxx.com/ksg-frontend/ksg-ui"
+  },
+  "keywords": [
+    "vue3组件库",
+    "vue3",
+    "antd-vue"
+  ],
+  "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "cli/*",
+    "docs/*",
+    "example/*",
+    "build/*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.corp.xxx.com/"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.17",
+    "@wangeditor/editor": "^5.1.23",
+    "@{{npmScope}}/utils": "workspace:^1.0.0"
+  }
+}

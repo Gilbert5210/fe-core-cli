@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+//    "outDir": "dist",
+    "declarationDir": "dist",
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "removeComments": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveSymlinks": true,
+    "typeRoots": ["typing"],
+    "paths": {
+      "@{{npmScope}}/utils/*": ["./packages/utils/*"],
+      "@{{npmScope}}/components/*": ["./packages/components/*"],
+      "@{{npmScope}}/theme-chalk/*": ["./packages/theme-chalk/*"],
+      "@{{npmScope}}/build/*": ["./build/*"],
+      "@{{npmScope}}/example/*": ["./example/*"],
+      "@{{npmScope}}/cli/*": ["./cli/*"],
+      "@{{npmScope}}/docs/*": ["./docs/*"]
+    }
+//    "types": ["vitest/globals", "@types/gulp"]
+  },
+  "exclude": ["node_modules", "**/node_modules/**", "coverage", "**/dist/**", "**/test/**"],
+  "ts-node": {
+    // Tell ts-node CLI to install the --loader automatically
+    "esm": true
+  }
+}

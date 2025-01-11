@@ -1,0 +1,8 @@
+lib/
+dist/
+esm/
+
+**.json
+**/md5Worker.js
+
+docs/demos/tooltip/tooltip-1.vue

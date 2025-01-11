@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "sourceMap": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "declaration": false,
+    "declarationMap": false,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "@types/jest", "@types/node"]
+  },
+  "exclude": ["node_modules/**", "esm/**", "lib/**", "test"],
+}

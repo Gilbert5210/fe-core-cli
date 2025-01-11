@@ -1,0 +1,132 @@
+:root {
+  //--vp-code-block-bg: #f9fafb;
+  /* --vp-code-block-bg: var(--vp-c-bg-alt); */
+  --vp-code-line-highlight-color: rgba(0, 0, 0, 0.5);
+  --vp-code-line-number-color: var(--vp-c-text-dark-3);
+  --vp-code-copy-code-hover-bg: rgba(255, 255, 255, 0.05);
+  --vp-code-copy-code-active-text: var(--vp-c-bg-alt);
+  --demi-border-color: #ebedf1;
+  //--vp-layout-max-width: 1440;
+}
+
+.vp-doc a {
+  display: inline-block;
+}
+.vp-doc h2  {
+  margin-top: 16px;
+}
+.dark {
+  --vp-code-block-bg: var(--vp-c-bg-alt);
+}
+
+.vp-doc [class*='language-']:before {
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+}
+
+.vp-doc tr {
+  border: 1px solid var(--demi-border-color);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: unset;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  padding: 10px 20px;
+}
+
+.vp-doc th {
+  font-size: 15px;
+  font-weight: 600;
+  //background-color: var(--vp-c-white-soft);
+}
+
+.vp-doc table td:first-child {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.VPSidebar {
+  padding-left: 32px !important;
+  width: var(--vp-sidebar-width) !important;
+}
+
+.VPSidebarItem {
+  .item {
+    p {
+      margin-bottom: 0!important;
+    }
+  }
+}
+
+.VPContent.has-sidebar {
+  padding-right: 0 !important;
+
+  .container {
+    max-width: 100% !important;
+  }
+  .aside-curtain {
+    height: 0%!important;
+  }
+  .content-container {
+    max-width: 100% !important;
+  }
+}
+.VPContent.has-sidebar {
+  padding-left: var(--vp-sidebar-width)!important;
+}
+.VPNav.no-sidebar {
+  .container {
+    margin: auto auto auto 0 !important;
+    max-width: none!important;
+  }
+}
+.VPNavBar.has-sidebar {
+  .container {
+    margin: auto auto auto 0 !important;
+    max-width: none!important;
+  }
+  .content {
+    padding-right: 32px !important;
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+  .curtain {
+    width: calc(100% - var(--vp-sidebar-width))!important;
+  }
+  .title {
+    width: calc(var(--vp-sidebar-width) - 64px) !important;
+    padding: 0px !important;
+    border-bottom-color: transparent !important;
+    margin-left: 16px !important;
+  }
+}
+
+
+.VPNavBarTitle .has-sidebar {
+  padding: 0;
+}
+
+.vp-doc ul, .vp-doc ol {
+  margin: 0;
+}
+
+svg {
+  vertical-align: baseline;
+}
+
+
+.vitepress-demo-preview-description .vitepress-demo-preview-description__title:before {
+  width: 1%;
+}
+.vitepress-demo-preview__container {
+  background: #fafafa;
+}
