@@ -9,7 +9,6 @@ program
     // 新增说明信息
     log.outCyanLog(`Run  roc <command> --help show details`)
   })
-  .version('0.1.0')
   .command('create <name>')
   .description('create a new project')
   .option('-f, --force', 'overwrite target directory if it exist')
