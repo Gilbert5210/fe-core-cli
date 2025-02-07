@@ -4,7 +4,6 @@
     "./src/common.ts",
     "./src/string.ts",
     "./src/array.ts",
-    "./src/request.ts",
     "./src/regex.ts",
     "./src/EnumExtend.ts",
     "./src/resolver.ts",

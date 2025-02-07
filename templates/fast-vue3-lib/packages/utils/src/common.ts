@@ -52,7 +52,7 @@ export type loopIntervalModel = {
   stop: () => void
 }
 // eslint-disable-next-line no-unused-vars
-type loopIntervalCallback = (stop: () => void) => Promise<void | number>
+export type loopIntervalCallback = (stop: () => void) => Promise<void | number>
 /**
  * 轮询函数
  * @param callback 回调函数

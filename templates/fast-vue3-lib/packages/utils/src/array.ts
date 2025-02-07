@@ -23,7 +23,7 @@ export const insertTargetArr = (data: any[], sourceIndex: number, targetIndex: n
   return currArr
 }
 
-type ArrayItem = {
+export type ArrayItem = {
   label: string
   value: any
   [key: string]: any
